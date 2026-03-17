@@ -3,6 +3,9 @@ Still in prototype status
 Todo:
 =====
 
+https://community.hetzner.com/tutorials/ai-chatbot-with-ollama-and-open-webui
+
+
 #LLM
 https://docs.openwebui.com
 https://docs.openwebui.com/features/
@@ -12,10 +15,19 @@ https://ollama.com/
 https://github.com/ollama/ollama
 https://docs.ollama.com/api/introduction
 https://github.com/ollama/ollama-python
+https://github.com/meirm/ollama-tools
+
+https://github.com/run-llama/llama_index
+https://www.llamaindex.ai/
+
+
+
 
 
 
 (https://docs.openwebui.com/features/chat-conversations/rag/document-extraction/mistral-ocr  -> Media?)
+https://github.com/open-webui/open-webui
+
 https://openclaw.ai/
 
 https://www.openresponses.org/specification
@@ -29,6 +41,17 @@ https://t3n.de/news/systemcheck-ki-tool-welches-sprachmodell-laeuft-auf-deiner-h
 https://github.com/AlexsJones/llmfit
 
 https://www.kdnuggets.com/pandas-vs-polars-a-complete-comparison-of-syntax-speed-and-memory
+
+https://www.youtube.com/watch?v=apzklu5wnBM
+
+
+https://github.com/Njengah/claude-code-cheat-sheet
+
+
+https://github.com/microsoft/BitNet
+https://t3n.de/news/microsoft-stellt-neues-1-bit-sprachmodell-vor-aber-es-gibt-einen-haken-1683692/
+
+
 
 
 

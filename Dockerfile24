@@ -1,0 +1,99 @@
+# Machine Learning Dockerfile 
+#
+# https://github.com/tamboraorg/docker/creml
+#
+
+# Pull base image.
+FROM credocker/crepython:2024.0
+
+#https://community.hetzner.com/tutorials/ai-chatbot-with-ollama-and-open-webui
+ 
+
+MAINTAINER Michael Kahle <michael.kahle@yahoo.de>
+
+ARG BUILD_YEAR=2024
+ARG BUILD_MONTH=0
+ARG BUILD_TAG=latest
+
+# 'GPU' or 'CPU'
+ENV PROCESSOR_MODE=CPU   
+ENV NVIDIA_VERSION=470
+
+# version: yyyy.n for stable versions / 0.yyyy for development
+ENV TENSORFLOW_VERSION=2.16.1
+## 2.16.0
+ENV KERAS_VERSION=3.8.0 
+
+LABEL Name="ML for CRE" \
+      CRE=$CRE_VERSION \ 
+      Year=$BUILD_YEAR \
+      Month=$BUILD_MONTH \
+      Version=$TENSORFLOW_VERSION \
+      OS="Ubuntu:$UBUNTU_VERSION" \
+      Build_=$BUILD_TAG 
+
+
+# install GPU driver
+# https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04
+RUN add-apt-repository ppa:graphics-drivers/ppa
+RUN apt-get  -y --no-install-recommends install ubuntu-drivers-common
+
+
+RUN ubuntu-drivers devices
+#RUN ubuntu-drivers autoinstall
+RUN apt-get  -y --no-install-recommends install nvidia-driver-$NVIDIA_VERSION
+RUN apt-get  -y --no-install-recommends install nvidia-utils-$NVIDIA_VERSION
+RUN apt-get  -y --no-install-recommends install nvidia-dkms-$NVIDIA_VERSION
+#RUN apt-get -y --no-install-recommends install nvidia-$NVIDIA_VERSION
+## RUN cat /proc/driver/nvidia/version
+## RUN nvidia-smi
+## RUN modinfo nvidia | grep version
+RUN apt-get  -y --no-install-recommends install nvidia-cuda-toolkit
+## RUN lspci | grep -i nvidia
+RUN nvcc  --version
+## RUN cat /proc/driver/nvidia/version
+## RUN nvidia-smi
+## RUn modinfo nvidia | grep version
+
+# WebUI
+
+RUN apt update && sudo apt install npm python3-pip python3-venv git -y
+RUN cd /cre/ && git clone https://github.com/open-webui/open-webui.git
+RUN cd open-webui && cp -RPp .env.example .env
+
+WORKDIR /cre/open-webui
+
+## curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+## source ~/.bashrc
+## nvm install 22 && nvm use 22
+## npm install -g npm@latest
+
+RUN npm i && npm run build
+
+RUN cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt -U
+
+
+RUN pip3 list
+
+# Freeze python requirements here:
+RUN mkdir -p /cre && \ 
+    pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
+
+RUN mkdir -p /cre && touch /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t creML \t $TENSORFLOW_VERSION" >> /cre/versions.txt && \ 
+#   echo "$(date +'%F %R') \t  $(pip3 list | grep 'tensorflow ')" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t  keras \t $(python3 -c 'import keras; print(keras.__version__)')" 2>nul >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  tensorflow \t $(python3 -c 'import tensorflow; print(tensorflow.__version__)')" 2>nul >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t  nvcc \t $(nvcc  --version | grep release)" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  $(pip3 list | grep 'ollama ')" >> /cre/versions.txt
+
+
+COPY cre /cre
+
+
+#EXPOSE 8080
+
+ENTRYPOINT ["/cre/llm-entrypoint.sh"]
+CMD ["shoreman", "/cre/llm-procfile"]
+
+#CMD ["/usr/bin/sleep", "1000000"]
