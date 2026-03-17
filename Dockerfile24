@@ -59,7 +59,7 @@ RUN nvcc  --version
 
 RUN apt update && sudo apt install npm python3-pip python3-venv git -y
 RUN cd /cre/ && git clone https://github.com/open-webui/open-webui.git
-RUN cd open-webui && cp -RPp .env.example .env
+RUN cd /cre/open-webui && cp -RPp .env.example .env
 
 WORKDIR /cre/open-webui
 
