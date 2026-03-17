@@ -77,7 +77,7 @@ RUN curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | bash - && ap
 ENV NPM_CONFIG_PREFIX=/cre/node/.npm-global
 ENV PATH=$PATH:/cre/node/.npm-global/bin
 RUN mkdir -p /cre/node/.npm-global
-RUN npm -g config set user root 
+##RUN npm -g config set user root 
 RUN npm install -g n 
 
 ## RUN apt-get update && apt-get install -y nodejs npm 
