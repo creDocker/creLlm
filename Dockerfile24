@@ -20,6 +20,8 @@ ARG BUILD_TAG=latest
 ENV PROCESSOR_MODE=CPU   
 ENV NVIDIA_VERSION=470
 
+ENV NODE_VERSION 22
+
 # version: yyyy.n for stable versions / 0.yyyy for development
 ENV TENSORFLOW_VERSION=2.16.1
 ## 2.16.0
@@ -66,10 +68,21 @@ WORKDIR /cre/open-webui
 
 
 # needs npm ...
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-RUN source ~/.bashrc
-RUN nvm install 22 && nvm use 22
-RUN npm install -g npm@latest
+##RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+##RUN source ~/.bashrc
+##RUN nvm install 22 && nvm use 22
+##RUN npm install -g npm@latest
+
+RUN curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | bash - && apt-get install -y nodejs ## npm included in nodejs
+ENV NPM_CONFIG_PREFIX=/cre/node/.npm-global
+ENV PATH=$PATH:/cre/node/.npm-global/bin
+RUN mkdir -p /cre/node/.npm-global
+RUN npm -g config set user root 
+RUN npm install -g n 
+
+## RUN apt-get update && apt-get install -y nodejs npm 
+
+
 ### end npm
 
 RUN npm i && npm run build
@@ -84,11 +97,9 @@ RUN mkdir -p /cre && \
     pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
-   echo "$(date +'%F %R') \t creML \t $TENSORFLOW_VERSION" >> /cre/versions.txt && \ 
-#   echo "$(date +'%F %R') \t  $(pip3 list | grep 'tensorflow ')" >> /cre/versions.txt && \
-   echo "$(date +'%F %R') \t  keras \t $(python3 -c 'import keras; print(keras.__version__)')" 2>nul >> /cre/versions.txt && \ 
-   echo "$(date +'%F %R') \t  tensorflow \t $(python3 -c 'import tensorflow; print(tensorflow.__version__)')" 2>nul >> /cre/versions.txt && \
-   echo "$(date +'%F %R') \t  nvcc \t $(nvcc  --version | grep release)" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t creLLM \t $TENSORFLOW_VERSION" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  node \t $(node --version)" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t  npm \t $(npm --version)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(pip3 list | grep 'ollama ')" >> /cre/versions.txt
 
 

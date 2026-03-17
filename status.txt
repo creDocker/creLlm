@@ -5,6 +5,12 @@ Todo:
 
 https://community.hetzner.com/tutorials/ai-chatbot-with-ollama-and-open-webui
 
+https://docs.openwebui.com/troubleshooting/password-reset/#step-1-generate-a-new-password-hash--1
+https://docs.openwebui.com/troubleshooting/sso
+
+https://docs.openwebui.com/getting-started/advanced-topics/scaling#step-1--switch-to-postgresql
+
+
 
 #LLM
 https://docs.openwebui.com
