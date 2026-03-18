@@ -88,7 +88,10 @@ RUN \
 
 ### end npm
 
-RUN npm i && npm run build
+# https://github.com/open-webui/open-webui/issues/16556
+# https://www.reddit.com/r/OpenWebUI/comments/1m5picn/cant_get_npm_to_install_all_dependencies/
+#RUN npm --force i && npm run build
+RUN npm --force i && npm run build
 
 RUN cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt -U
 
