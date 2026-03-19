@@ -93,7 +93,7 @@ RUN \
 #RUN npm --force i && npm run build
 RUN npm --force i && npm run build
 
-RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && source /cre/open-webui/backend/venv/bin/activate && pip install -r /cre/open-webui/backend/requirements.txt -U
+RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && type source && cat /cre/open-webui/backend/venv/bin/activate && source /cre/open-webui/backend/venv/bin/activate && pip install -r /cre/open-webui/backend/requirements.txt -U
 
 
 RUN pip3 list
