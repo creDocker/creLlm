@@ -4,7 +4,7 @@
 #
 
 # Pull base image.
-FROM credocker/crepython:2024.0
+FROM credocker/crepython:2026.0
 
 # https://community.hetzner.com/tutorials/ai-chatbot-with-ollama-and-open-webui
 # https://www.leadergpu.com/catalog/584-open-webui-all-in-one
@@ -62,9 +62,11 @@ RUN nvcc  --version
 
 # WebUI
 
-RUN apt update && sudo apt install npm python3-pip python3-venv git -y
-RUN cd /cre/ && git clone https://github.com/open-webui/open-webui.git
-RUN cd /cre/open-webui && cp -RPp .env.example .env
+#RUN apt update && sudo apt install npm python3-pip python3-venv git -y
+#RUN cd /cre/ && git clone https://github.com/open-webui/open-webui.git
+#RUN cd /cre/open-webui && cp -RPp .env.example .env
+
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
 WORKDIR /cre/open-webui
 
