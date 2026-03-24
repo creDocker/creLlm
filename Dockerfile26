@@ -96,21 +96,21 @@ WORKDIR /cre/open-webui
 #RUN npm --force i && npm run build
 #RUN npm --force i && npm run build
 
-#RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && cat /cre/open-webui/backend/venv/bin/activate && source /cre/open-webui/backend/venv/bin/activate && pip install -r /cre/open-webui/backend/requirements.txt -U
+#RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && cat /cre/open-webui/backend/venv/bin/activate && source / #cre/open-webui/backend/venv/bin/activate && pip install -r /cre/open-webui/backend/requirements.txt -U
 #RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && pip install -r /cre/open-webui/backend/requirements.txt -U
 
 
-RUN pip3 list
+RUN uv pip list
 
 # Freeze python requirements here:
 RUN mkdir -p /cre && \ 
-    pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
+    uv pip freeze --no-cache-dir > /cre/requirements.txt.orig
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t creLLM \t $TENSORFLOW_VERSION" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  node \t $(node --version)" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  npm \t $(npm --version)" >> /cre/versions.txt && \ 
-   echo "$(date +'%F %R') \t  $(pip3 list | grep 'ollama ')" >> /cre/versions.txt
+   echo "$(date +'%F %R') \t  $(uv pip list | grep 'ollama ')" >> /cre/versions.txt
 
 
 COPY cre /cre
