@@ -71,30 +71,10 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 WORKDIR /cre/open-webui
 
 
-# needs npm ...
-##RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-##RUN source ~/.bashrc
-##RUN nvm install 22 && nvm use 22
-##RUN npm install -g npm@latest
-
-#RUN curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | bash - && apt-get install -y nodejs ## npm included in nodejs
-#ENV NPM_CONFIG_PREFIX=/cre/node/.npm-global
-#ENV PATH=$PATH:/cre/node/.npm-global/bin
-#RUN mkdir -p /cre/node/.npm-global
-##RUN npm -g config set user root 
-#RUN npm install -g n 
-
-RUN \
-  apt-get update && \
-  apt-get install -y nodejs npm
-
-
-### end npm
-
 # https://github.com/open-webui/open-webui/issues/16556
 # https://www.reddit.com/r/OpenWebUI/comments/1m5picn/cant_get_npm_to_install_all_dependencies/
 #RUN npm --force i && npm run build
-RUN npm --force i && npm run build
+#RUN npm --force i && npm run build
 
 #RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && cat /cre/open-webui/backend/venv/bin/activate && source /#cre/open-webui/backend/venv/bin/activate && pip install -r /cre/open-webui/backend/requirements.txt -U
 #RUN cd /cre/open-webui/backend && python3 -m venv venv && ls -l && ls -l venv/bin/ && pip install -r /cre/open-webui/backend/requirements.txt -U
