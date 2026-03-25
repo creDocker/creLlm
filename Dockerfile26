@@ -68,6 +68,12 @@ RUN nvcc  --version
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 
+## OLLAMA SERVER
+# https://docs.ollama.com/
+# https://github.com/ollama/ollama
+# https://github.com/ollama/ollama/blob/main/docs/api.md
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
 WORKDIR /cre/open-webui
 
 
