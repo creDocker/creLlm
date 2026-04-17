@@ -1,0 +1,22 @@
+Imagine, you are an API, that extracts travel information from diaries. Please analyse the following entries (inside triple single quotes: ''') and return for the CURRENT DATE (in addition the text will contain the entry BEFORE and the entry AFTER the CURRENT date:
+In addition you will get the location name of the last stay (i.e. LAST STAY: St. Peter)
+
+    Language of entry (use two letter language code from ISO 639-1)
+    Location name where travelling starts  
+    Latitude of location, where travelling starts  (use WGS84 as float) 
+    Longitude of location, where travelling starts  (use WGS84 as float) 
+    Start date of traveling (use ISO 8601 format)
+    Time of day for start of traveling (i.e. morning, noon, afternoon, evening, night, unknown)
+    Location name where travelling ends    
+    Latitude of location, where travelling ends  (use WGS84 as float) 
+    Longitude of location, where travelling ends  (use WGS84 as float) 
+    End date of traveling (use ISO 8601 format)
+    Time of day for end of traveling (i.e. morning, noon, afternoon, evening, night, unknown)
+    List of Locations inbetween (if any)
+    List of Countries visited (use two letter ISO 3166-1 alpha-2 codes) - return dictionary of possible countries and their probability 
+    Mean of transportation from list ['Horse back', 'Horse wagon', 'By Feet', 'Not travelling', 'Other', 'Unknown', 'At Home']
+  
+Only consider the travelling of the author of the diary: Ignaz Speckle, the abbot of the monastery in St. Peter.
+When Ignaz Speckle stays at the same place, use the same location for start and end and mean of transportation 'Not travelling'.
+When Ignaz Speckle stays in St. Peter, use the same location for start and end and mean of transportation 'At Home'   
+Use json-format with keywords: 'language', 'location_name_start', 'latitude_start','longitude_start','date_start','time_of_day_start', 'location_name_end', 'latitude_end','longitude_end','date_end','time_of_day_end', 'locations','countries','mean_of_transportation'

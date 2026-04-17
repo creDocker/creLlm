@@ -1,0 +1,43 @@
+Imagine you are a historian, that analyzes old german documents from the years 1200 to 1950 regarding precipitation information. What you are interested in is the standardized precipitation index (SPI) of each month from -3 (extremly dry) to +3 (extremly wet). Please provide for each index class three typical sentences as they would appear in such documents.
+
+---
+
+−3 (extremely dry)
+„In diesem Monat fiel gar kein Regen, und die Erde ward so dürr, daß Felder und Wiesen verbrannten.“
+„Eine große Dürre herrschte, also daß Brunnen versiegten und die Bäche austrockneten.“
+„Es war eine solche Trockenheit, daß die Saat verdarb und großer Mangel im Lande entstand.“
+−2 (very dry)
+„Der Regen blieb lange aus, und die Felder litten merklich unter der Dürre.“
+„Es fiel wenig Niederschlag, und die Erde trocknete hart und rissig auf.“
+„Die Witterung war sehr trocken, und die Wasserstände sanken ungewöhnlich tief.“
+−1 (dry)
+„Der Monat war trocken, und nur selten fiel ein geringer Regen.“
+„Es mangelte an Niederschlag, doch blieb größerer Schaden aus.“
+„Die Witterung zeigte sich eher dürftig an Regen, und die Böden wurden zunehmend trocken.“
+0 (normal / average)
+„Es fiel Regen zu rechter Zeit, und die Witterung war der Jahreszeit gemäß.“
+„Der Monat brachte gewöhnlichen Niederschlag, weder zu viel noch zu wenig.“
+„Die Regenfälle waren wohl verteilt, wie es für diese Zeit üblich ist.“
++1 (wet)
+„Es fiel häufiger Regen, doch ohne großen Schaden für Felder und Wege.“
+„Der Monat war feucht, und die Böden blieben meist gut durchtränkt.“
+„Die Witterung brachte reichlichen Regen, der das Wachstum förderte.“
++2 (very wet)
+„Es regnete viel und anhaltend, so daß die Flüsse anschwollen.“
+„Der Monat war ungewöhnlich nass, und die Wege wurden schwer passierbar.“
+„Starker Regen fiel oft, und die Felder standen zeitweise unter Wasser.“
++3 (extremely wet)
+„Es fiel ein solcher Regen, daß Flüsse und Bäche über die Ufer traten und große Überschwemmung entstand.“
+„Die Wasser gingen hoch über die Felder, und viele Häuser wurden von den Fluten beschädigt.“
+„Ein unaufhörlicher Regen brachte große Not, indem das Land weithin unter Wasser stand.“
+
+---
+
+If you want, I can next:
+
+derive automatic SPI classification rules from such phrases
+build a joint temperature–precipitation reconstruction dataset
+or generate multilingual variants (Latin, Middle High German, Early New High German)
+
+
+

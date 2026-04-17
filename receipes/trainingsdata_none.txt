@@ -1,0 +1,91 @@
+Imagine you are a historian, that analyzes old german documents from the years 1200 to 1950. Provide some typical sentences, that have no temperature or precipitation information at all. Generate multilingual variants (Latin, Middle High German, Early New High German). Return the data in a json list with keywords: "language","century" and "quote"
+
+---
+
+```json
+[
+  {
+    "language": "la",
+    "century": "13",
+    "quote": "LAT: Monachi in claustro convenientes de rebus ecclesiae diligenter tractaverunt."
+  },
+  {
+    "language": "gmh",
+    "century": "13",
+    "quote": "MHG: Die brüeder kamen zesamene und rieten von irme klôsterlîchen leben."
+  },
+  {
+    "language": "de",
+    "century": "16",
+    "quote": "ENHG: Die Brüder versammelten sich und hielten Rat über die Angelegenheiten des Klosters."
+  },
+
+  {
+    "language": "la",
+    "century": "14",
+    "quote": "LAT: Mercatores ad forum convenerunt et varia bona inter se commutaverunt."
+  },
+  {
+    "language": "gmh",
+    "century": "14",
+    "quote": "MHG: Die kouflüte kâmen ze dem markte und verkouften ir wâren."
+  },
+  {
+    "language": "de",
+    "century": "17",
+    "quote": "ENHG: Die Kaufleute kamen auf den Markt und handelten mit ihren Waren."
+  },
+
+  {
+    "language": "la",
+    "century": "15",
+    "quote": "LAT: Rex legatos misit ad civitatem, ut de pace tractarent."
+  },
+  {
+    "language": "gmh",
+    "century": "15",
+    "quote": "MHG: Der künic sante boten in die stat, daz si von fride sprachen."
+  },
+  {
+    "language": "de",
+    "century": "18",
+    "quote": "ENHG: Der König sandte Gesandte in die Stadt, um über den Frieden zu verhandeln."
+  },
+
+  {
+    "language": "la",
+    "century": "16",
+    "quote": "LAT: Incolae domos suas restauraverunt et muros civitatis firmaverunt."
+  },
+  {
+    "language": "gmh",
+    "century": "16",
+    "quote": "MHG: Die liute buweten ir hüser und vestenten die mûre der stat."
+  },
+  {
+    "language": "de",
+    "century": "18",
+    "quote": "ENHG: Die Einwohner erneuerten ihre Häuser und befestigten die Mauern der Stadt."
+  },
+
+  {
+    "language": "la",
+    "century": "17",
+    "quote": "LAT: Scriba chronicon diligenter conscripsit et res gestas memoriae tradidit."
+  },
+  {
+    "language": "gmh",
+    "century": "17",
+    "quote": "MHG: Der schrîber schreib die geschiht mit vlîze und behielt si in gedenke."
+  },
+  {
+    "language": "de",
+    "century": "19",
+    "quote": "ENHG: Der Schreiber verfasste die Chronik sorgfältig und hielt die Ereignisse fest."
+  }
+]
+```
+
+
+---
+

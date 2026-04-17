@@ -1,0 +1,18 @@
+Imagine, you are an API, that extracts information from news. Please analyse the following article (inside triple single quotes: ''') and return:
+
+    Language of article (use two letter language code from ISO 639-1)
+    Type of natural hazard or extreme from this list: ['Thunderstorm', 'Flood', 'Storm', 'Storm Surge', 'Flash Flood', 'Precipitation', 'Tsunami', 'Drought', 'Earthquake', 'Landslide', 'Cold Wave', 'Heat Wave', 'Iceberg', 'Tropical Cyclone', 'Volcano', 'Snow Avalanche', 'Wildfire', 'Fog', 'Snow&Ice', 'Wet Spell', 'unknown', 'none'] - return dictionary of possible hazards and their probability
+    List of Locations
+    List of Countries (use two letter ISO 3166-1 alpha-2 codes) - return dictionary of possible countries and their probability * Latitude and Longitude (use WGS84 as float) * Month of Event (as integer) * Year of Event (as integer) * Intensity of Event from this list: ['Low', 'Medium', 'High'] Use json-format with keywords: 'language','hazards','locations','countries','latitude','longitude','month','year','intensity'
+
+
+---
+
+
+Imagine, you are an API, that extracts events (location, date and hazard) from text. Please analyse the following article (inside triple single quotes: ''') and return: * Language of article (use two letter language code from ISO 639-1) * List of events containing: * * Type of natural hazard or extreme from this list: ['Thunderstorm', 'Flood', 'Storm', 'Storm Surge', 'Flash Flood', 'Precipitation', 'Tsunami', 'Drought', 'Earthquake', 'Landslide', 'Cold Wave', 'Heat Wave', 'Iceberg', 'Tropical Cyclone', 'Volcano', 'Snow Avalanche', 'Wildfire', 'Fog', 'Snow&Ice', 'Wet Spell', 'unknown', 'none'] and the Intensity of Hazard from this list: ['Low', 'Medium', 'High'] and the extracted phrase (citation/quote) from text decsribing the hazard only * * The location name, where hazard happens and if possible its GND (Gemeinsame Normdatei) and geonames id and its country as two letter ISO 3166-1 alpha-2 codes and its Latitude and Longitude (use WGS84 as float) and the extracted phrase (citation/quote) from text of the location * * The date of the event with Month of Hazard (as integer) and Year of Hazard (as integer), date string as ISO 8601, calendar from list:['gregorian','julian','unknown'] and the extracted phrase (citation/quote) from text of the date * * the probability of the event (= combination of hazard, location, date) Use json-format with keywords: 'language','events': ['hazard':['extreme','quote','intensity'],'location': ['name of location','country','latitude','longitude','quote'],'time':['month','year','date','quote','calendar'],'probability']
+
+---
+
+
+
+

@@ -8,7 +8,21 @@ https://community.hetzner.com/tutorials/ai-chatbot-with-ollama-and-open-webui
 https://docs.openwebui.com/troubleshooting/password-reset/#step-1-generate-a-new-password-hash--1
 https://docs.openwebui.com/troubleshooting/sso
 
+https://docs.openwebui.com/features/
+
+#create admin cli
+https://github.com/open-webui/open-webui/discussions/19904
+
+
 https://docs.openwebui.com/getting-started/advanced-topics/scaling#step-1--switch-to-postgresql
+
+
+https://docs.openwebui.com/features/access-security/rbac/permissions/
+https://docs.openwebui.com/features/access-security/analytics/
+
+https://github.com/open-webui/pipelines
+https://dartmouth.github.io/openwebui-token-tracking/
+
 
 
 
@@ -29,11 +43,16 @@ https://www.llamaindex.ai/
 
 https://github.com/Crosstalk-Solutions/project-nomad
 
+https://github.com/lyogavin/airllm
 
+https://ai.google.dev/gemma/docs/core?hl=de
+https://www.golem.de/news/apache-lizenz-google-gemma-4-in-vier-modellgroessen-veroeffentlicht-2604-207239.html
 
 
 (https://docs.openwebui.com/features/chat-conversations/rag/document-extraction/mistral-ocr  -> Media?)
 https://github.com/open-webui/open-webui
+
+https://forum.obsidian.md/t/ai-tools/90288
 
 https://openclaw.ai/
 
@@ -59,7 +78,35 @@ https://github.com/microsoft/BitNet
 https://t3n.de/news/microsoft-stellt-neues-1-bit-sprachmodell-vor-aber-es-gibt-einen-haken-1683692/
 
 
+https://github.com/opendataloader-project/opendataloader-pdf
+https://opendataloader.org/
+https://pypi.org/project/textract/
+https://github.com/deanmalmgren/textract
 
+Claude
+https://www.instagram.com/p/DW33l6UjpXw/?igsh=cGQzdThuY3lwNjBo
+
+
+https://opencode.ai/de
+https://opencode.ai/de/zen
+https://github.com/anomalyco/opencode
+https://opencode.ai/docs/de/zen/#pricing
+
+keycloak
+# https://github.com/open-webui/open-webui/discussions/6224
+# https://github.com/open-webui/open-webui/discussions/15592
+https://stackoverflow.com/questions/79651411/how-to-configure-open-webui-sso-with-keycloak
+
+
+gemma4
+https://www.instagram.com/p/DW1JtzulIQl/?img_index=2&igsh=MWF5ZjAzdTQ1MmUwdw%3D%3D
+https://www.mindstudio.ai/blog/how-to-run-gemma-4-locally-ollama
+https://ollama.com/library/gemma4
+
+
+https://python.useinstructor.com/
+https://pydantic.dev/docs/
+https://pydantic.dev/docs/ai/overview/
 
 
 

@@ -1,0 +1,45 @@
+Imagine you are a historian, that analyzes old german documents from the years 1200 to 1950 regarding temperature information. What you are interested in is the standardized temperature index of each month from -3 (extremly cold) to +3 (extremly warm). Please provide for each index class three typical sentences as they would appear in such documents.
+
+---
+
+−3 (extremely cold)
+„In diesem Monat war eine so grimmige Kälte, daß die Flüsse und Seen bis auf den Grund gefroren und viele Menschen und Tiere elendiglich umkamen.“
+„Der Frost hielt ohne Unterlaß, Tag und Nacht, und ließ weder Saat noch Vieh gedeihen, also daß große Not im Lande entstand.“
+„Solch unerhörte Kälte wurde berichtet, daß selbst der Wein in den Kellern erstarrte und die Mühlen stillstanden.“
+−2 (very cold)
+„Der Monat war von starkem Frost gezeichnet, und Eis bedeckte die Gewässer über viele Wochen.“
+„Es herrschte anhaltende Kälte, die Felder blieben hart gefroren und die Arbeit kam kaum voran.“
+„Die Witterung war ungewöhnlich kalt, und häufige Fröste schadeten dem jungen Getreide.“
+−1 (cold)
+„Der Monat zeigte sich kühl und rauh, mit manchem Frost in den Nächten.“
+„Es war kälter als gewöhnlich, doch ohne großen Schaden für Mensch und Feld.“
+„Die Tage blieben frisch, und ein kalter Wind wehte beständig über das Land.“
+0 (normal / average)
+„Die Witterung war der Jahreszeit gemäß und ohne besondere Abweichung.“
+„Es hielt sich ein gemäßigtes Wetter, weder zu kalt noch zu warm.“
+„Der Monat verlief in gewöhnlicher Weise, wie man es zu dieser Zeit erwartet.“
++1 (warm)
+„Der Monat war milde und angenehm, mit wärmeren Tagen als gemeinhin üblich.“
+„Es zeigte sich eine freundliche Wärme, die das Wachstum der Pflanzen begünstigte.“
+„Die Witterung war etwas wärmer als sonst, doch blieb sie erträglich.“
++2 (very warm)
+„Es herrschte große Wärme, und die Sonne brannte stark über viele Tage hinweg.“
+„Der Monat war ungewöhnlich warm, so daß die Felder frühzeitig reiften.“
+„Die Hitze war beträchtlich und ließ die Bäche merklich zurückgehen.“
++3 (extremely warm)
+„Eine solche Hitze ward kaum je gesehen, daß die Erde dürrete und Mensch wie Vieh schwer litten.“
+„Die Glut der Sonne war so heftig, daß Brunnen versiegten und die Ernte verdarb.“
+„In diesem Monat herrschte eine unerhörte Wärme, welche große Dürre und Not im ganzen Lande verursachte.“
+
+---
+
+If you want, I can next:
+
+map such phrases automatically to indices (rule-based or ML)
+generate Latin or Middle High German variants
+or build a training dataset for temperature reconstruction
+
+
+
+
+

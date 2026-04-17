@@ -2,7 +2,10 @@
 
 cd /cre/open-webui/backend
 
-./start.sh
+ollama serve
+ollama run llama3
+
+## ./start.sh
 
 # just sleep for now
 sleep 10000000

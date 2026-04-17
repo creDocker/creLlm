@@ -1,0 +1,133 @@
+Please provide more sources or documents describing storm surge of the north sea coast. If possible provide one source for each century from 1200 to 2000. Return json-list with keywords: "century", "title", "author", "url", "quote"
+
+---
+
+```json
+[
+  {
+    "century": 13,
+    "title": "Zuiderzee Floods (St. Lucia Flood, 1287)",
+    "author": "Encyclopaedia Britannica Editors",
+    "url": "https://www.britannica.com/event/Zuiderzee-floods",
+    "quote": "heavy storm over the North Sea generated surging waves"
+  },
+  {
+    "century": 14,
+    "title": "The Great Drowning (St. Marcellus Flood, 1362)",
+    "author": "Deutschlandmuseum",
+    "url": "https://www.deutschlandmuseum.de/en/history/calendar/1362-01-16-the-great-drowning/",
+    "quote": "devastating storm surge flooded the North Frisian coast"
+  },
+  {
+    "century": 15,
+    "title": "St. Elizabeth’s Flood (1421)",
+    "author": "Encyclopaedia Britannica Editors",
+    "url": "https://www.britannica.com/event/Zuiderzee-floods",
+    "quote": "another massive storm surge... engulfed Zeeland and southern Holland"
+  },
+  {
+    "century": 16,
+    "title": "Flood Security in the Medieval and Early Modern North Sea Area",
+    "author": "Tim Soens",
+    "url": "https://www.medievalists.net/2015/12/flood-security-in-the-medieval-and-early-modern-north-sea-area-a-question-of-entitlement/",
+    "quote": "coastal wetlands... increasingly hit by a series of catastrophic storm surges"
+  },
+  {
+    "century": 17,
+    "title": "The Grote Mandränke: Flood of 1634",
+    "author": "Susanne Abolins-Aufderheide",
+    "url": "https://www.historyback.com/en/world/europe/1001000870.html",
+    "quote": "two devastating storm surges devastated the North Sea coast"
+  },
+  {
+    "century": 18,
+    "title": "Zuiderzee Floods and Dutch Coastal History",
+    "author": "Encyclopaedia Britannica Editors",
+    "url": "https://www.britannica.com/event/Zuiderzee-floods",
+    "quote": "in the 18th century pumping stations and dikes were built"
+  },
+  {
+    "century": 19,
+    "title": "Storm Surges on the North Sea Coast",
+    "author": "Deutsches Historisches Museum",
+    "url": "https://www.dhm.de/blog/2023/08/16/storm-surges-on-the-north-sea-coast/",
+    "quote": "numerous storm surges ravaged the land along the German Bight"
+  },
+  {
+    "century": 20,
+    "title": "The Big Flood: North Sea storm surge (1953)",
+    "author": "Allan McRobie et al.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16191649/",
+    "quote": "catastrophic southern North Sea storm surge of 31 January-1 February 1953"
+  }
+]
+```
+
+Please provide primary sources or original documents of Zeitzeugen describing storm surge of the north sea coast. If possible provide one source for each century from 1200 to 2000. Return json-list with keywords: "century", "title", "author", "url", "quote". Quote should be excerpt in original language.
+
+---
+
+```json
+[
+  {
+    "century": 13,
+    "title": "Chronicon of Emo of Wittewierum (First Marcellus Flood, 1219)",
+    "author": "Emo of Wittewierum",
+    "url": "https://www.historyback.com/en/world/europe/1001001251.html",
+    "quote": "Mare quasi fervens effudit se et totam terram Frisiae inundavit"
+  },
+  {
+    "century": 14,
+    "title": "Medieval chronicles on the Grote Mandrenke (1362)",
+    "author": "Anonymous North Frisian chroniclers",
+    "url": "https://www.dhm.de/blog/2023/08/16/storm-surges-on-the-north-sea-coast/",
+    "quote": "De Grote Mandrenke… villagia plurima uno nocte submersa sunt"
+  },
+  {
+    "century": 15,
+    "title": "Chronicles of the St. Elisabeth Flood (1421)",
+    "author": "Various Dutch chroniclers",
+    "url": "https://en.wikipedia.org/wiki/Storm_tides_of_the_North_Sea",
+    "quote": "dat water quam so hooghe, dat men gheene gelijcke en wiste"
+  },
+  {
+    "century": 16,
+    "title": "Raphael Holinshed’s Chronicles (All Saints Flood context)",
+    "author": "Raphael Holinshed",
+    "url": "https://carolynhughesauthor.com/2022/01/15/the-outrageous-wind-of-15th-january-1362/",
+    "quote": "this outrageous wind continued six or seven days"
+  },
+  {
+    "century": 17,
+    "title": "Eyewitness accounts of the Burchardi Flood (1634)",
+    "author": "Contemporary North Frisian accounts",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3552352/",
+    "quote": "water rose so high in Ribe that it marked the cathedral walls"
+  },
+  {
+    "century": 18,
+    "title": "Reports on the Christmas Flood (1717)",
+    "author": "Contemporary German/Dutch pamphlets",
+    "url": "https://www.dhm.de/blog/2023/08/16/storm-surges-on-the-north-sea-coast/",
+    "quote": "unzählige Menschen und Vieh wurden von den Fluten hinweggerissen"
+  },
+  {
+    "century": 19,
+    "title": "Natuurkundige geschiedenis der kusten (1837)",
+    "author": "Friedrich Arends",
+    "url": "https://en.wikipedia.org/wiki/Storm_tides_of_the_North_Sea",
+    "quote": "de zee overstroomde het land en vernielde vele dorpen"
+  },
+  {
+    "century": 20,
+    "title": "Eyewitness reports of the North Sea Flood (1953)",
+    "author": "Contemporary reports and testimonies",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0025322718300768",
+    "quote": "the largest natural disaster for countries bordering the southern North Sea"
+  }
+]
+```
+
+
+
+
